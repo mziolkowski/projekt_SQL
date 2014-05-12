@@ -1,25 +1,53 @@
 ﻿<?xml version="1.0"?>
-<project name="xxxxxxxxxxxx" default="all" basedir=".">
+<project name="projekt_firma" default="all" basedir=".">
 	<description>Buduje z cząstek plik SQL</description>
 	
 	<target name="clean">
 		<delete file="_all.sql"/>
+		<delete file="_database.sql"/>
 		<delete file="_tables.sql"/>
+		<delete file="_init.sql"/>
 	</target>
 	
-	<target name="all" depends="tables">
+	<target name="all" depends="database,tables,init">
 		<concat destfile="_all.sql" fixlastline="yes">
-			<fileset file="_tables.sql"/>
+			<filelist dir=".">
+				<file name="_database.sql"/>
+				<file name="_tables.sql"/>
+				<file name="_init.sql"/>
+			</filelist>
 		</concat>
 	</target>
 	
+	<target name="database">
+		<concat destfile="_database.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="database\create.sql"/>
+			</filelist>
+		</concat>
+	</target>
 	
 	<target name="tables">
 		<concat destfile="_tables.sql" fixlastline="yes">
 			<filelist dir=".">
-				<file name="projekt_firma.sql"/>
+				<file name="tables\zamowienia.sql"/>
+				<file name="tables\klient.sql"/>
+				<file name="tables\importer.sql"/>
+				<file name="tables\kod_towaru.sql"/>
+				<file name="tables\platnosc.sql"/>
+				<file name="tables\pracownik.sql"/>
+				<file name="tables\stanowisko.sql"/>
+				<file name="tables\towary.sql"/>
+				<file name="tables\transport.sql"/>
 			</filelist>
 		</concat>
 	</target>
-
+	
+	<target name="init">
+		<concat destfile="_init.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="init\init_pracownicy.sql"/>
+			</filelist>
+		</concat>
+	</target>
 </project>
