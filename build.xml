@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<project name="xxxxxxxxxxxx" default="all" basedir=".">
+	<description>Buduje z cząstek plik SQL</description>
+	
+	<target name="clean">
+		<delete file="_all.sql"/>
+		<delete file="_tables.sql"/>
+	</target>
+	
+	<target name="all" depends="tables">
+		<concat destfile="_all.sql" fixlastline="yes">
+			<fileset file="_tables.sql"/>
+		</concat>
+	</target>
+	
+	
+	<target name="tables">
+		<concat destfile="_tables.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="projekt_firma.sql"/>
+			</filelist>
+		</concat>
+	</target>
+
+</project>
