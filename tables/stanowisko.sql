@@ -1,5 +1,5 @@
-CREATE TABLE Stanowsiko (
-id_stanowisko INT IDENTITY (1,1),
-nazaw VARCHAR (20),
+CREATE TABLE Stanowisko (
+id_stanowisko INT,
+nazwa VARCHAR (20),
 
 PRIMARY KEY (id_stanowisko));

@@ -1,7 +1,8 @@
 CREATE TABLE Importer (
-id_importer INT IDENTITY (1,1),
+id_importer INT,
 nazwa VARCHAR (30),
 adres VARCHAR (40),
+kod_pocztowy VARCHAR (7),
 telefon VARCHAR (15),
 poczatek_wspol DATE,
 koniec_wspol DATE,

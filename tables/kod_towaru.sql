@@ -1,5 +1,5 @@
-CREATE TABLE kod_towaru (
-id_kod INT IDENTITY (1,1),
+CREATE TABLE Kod_towaru (
+id_kod INT,
 magazyn VARCHAR (20),
 hala VARCHAR (2),
 poziom VARCHAR (2),
