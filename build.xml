@@ -34,6 +34,7 @@
 				<file name="tables\klient.sql"/>
 				<file name="tables\importer.sql"/>
 				<file name="tables\kod_towaru.sql"/>
+				<file name="tables\koszyk.sql"/>
 				<file name="tables\platnosc.sql"/>
 				<file name="tables\pracownik.sql"/>
 				<file name="tables\stanowisko.sql"/>
@@ -47,6 +48,12 @@
 		<concat destfile="_init.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="init\init_pracownicy.sql"/>
+				<file name="init\init_klient.sql"/>
+				<file name="init\init_kod_towaru.sql"/>
+				<file name="init\init_importer.sql"/>
+				<file name="init\init_stanowisko.sql"/>
+				<file name="init\init_towary.sql"/>
+				<file name="init\init_transport.sql"/>
 			</filelist>
 		</concat>
 	</target>

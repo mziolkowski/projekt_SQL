@@ -11,6 +11,6 @@ data_zwol DATE,
 mail VARCHAR (30),
 premia DECIMAL (10,2),
 pensja DECIMAL (10,2),
-stanowisko VARCHAR (20),
+id_stanowisko INT,
 
 PRIMARY KEY (id_pracownik));

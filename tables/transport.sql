@@ -1,5 +1,5 @@
 CREATE TABLE Transport ( 
-id_transport INT,
+id_transport INT IDENTITY (1001,1),
 nazwa VARCHAR (30),
 rodzaj VARCHAR (20),
 adres VARCHAR (40),

@@ -1,5 +1,5 @@
 CREATE TABLE Platnosc (
-id_platnosc INT,
+id_platnosc INT IDENTITY (1001,1),
 gotowka BIT,
 przelew BIT,
 raty BIT,
