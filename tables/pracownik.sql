@@ -14,3 +14,6 @@ pensja DECIMAL (10,2),
 id_stanowisko INT,
 
 PRIMARY KEY (id_pracownik));
+
+ADD FOREIGN KEY (id_stanowisko) REFERENCES Stanowisko (id_stanowisko)
+
