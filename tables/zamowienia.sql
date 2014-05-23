@@ -1,15 +1,15 @@
 
 CREATE TABLE Zamowienia (
 id_zamowienia INT IDENTITY (1001,1),
-id_koszyk INT,
-id_klienta INT,
-data_zamowienia DATE,
-id_platnosc INT,
-zaplacone BIT,
+id_koszyk INT NOT NULL,
+id_klienta INT NOT NULL,
+data_zamowienia DATE NOT NULL,
+id_platnosc INT NOT NULL,
+zaplacone BIT NOT NULL,
 faktora BIT,
-status_zamowienia VARCHAR (20),
-id_transport INT,
-czas_dostawy VARCHAR (2);
+status_zamowienia VARCHAR (20) NOT NULL,
+id_transport INT NOT NULL,
+czas_dostawy VARCHAR (2) NOT NULL;
 
 PRIMARY KEY (id_zamowienia));
 

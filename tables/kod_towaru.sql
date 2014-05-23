@@ -1,10 +1,10 @@
 
 CREATE TABLE Kod_towaru (
 id_kod INT,
-magazyn VARCHAR (20),
-hala VARCHAR (2),
-poziom VARCHAR (2),
-regal VARCHAR (2),
-polka VARCHAR (2);
+magazyn VARCHAR (20) NOT NULL,
+hala VARCHAR (2) NOT NULL,
+poziom VARCHAR (2) NOT NULL,
+regal VARCHAR (2) NOT NULL,
+polka VARCHAR (2) NOT NULL;
 
 PRIMARY KEY (id_kod));

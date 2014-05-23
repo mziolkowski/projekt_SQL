@@ -5,6 +5,6 @@ gotowka BIT,
 przelew BIT,
 raty BIT,
 kwota DECIMAL (10,2),
-waluta CHAR (3);
+--waluta CHAR (3); nie wiem czy potrzebne jesli i tak wszystko w PLN bedzie
 
 PRIMARY KEY (id_platnosc));
