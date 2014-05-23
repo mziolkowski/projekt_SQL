@@ -1,3 +1,4 @@
+
 CREATE TABLE Pracownik (
 id_pracownik INT,
 imie VARCHAR (20),
@@ -11,9 +12,8 @@ data_zwol DATE,
 mail VARCHAR (30),
 premia DECIMAL (10,2),
 pensja DECIMAL (10,2),
-id_stanowisko INT,
+id_stanowisko INT;
 
 PRIMARY KEY (id_pracownik));
 
 ADD FOREIGN KEY (id_stanowisko) REFERENCES Stanowisko (id_stanowisko)
-

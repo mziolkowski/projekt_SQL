@@ -1,3 +1,4 @@
+
 INSERT INTO importer VALUES
 (1001,'Intel','Bursztynowa 12','99-083','Szczecin','283-892-391','1990-01-05','2000-01-05','Tomasz Stachurski','Polska'),
 (1002,'Intel','Central Expy 190','33-221','Santa Clara','325-647-432','1995-01-05',NULL,'Jamie L. Matthews','Stany Zjednoczone'),
@@ -8,7 +9,7 @@ INSERT INTO importer VALUES
 (1007,'MSI','Jana Pawła II 93','00-300','Wrosław','849-234-134','2000-16-02',NULL,'Karol Pałek','Polska'),
 (1008,'Saphire','Grodkowska 123','02-072','Katowice','992-023-472','1992-12-21',NULL,'Dariusz Starnoch','Polska'),
 (1009,'Kingston','Valles 312','09-486','Fountain Valley','546-123-795','1999-12-21',NULL,'John Tu','Stany Zjednoczone'),
-(1010,'Kingston','Romanowska 31','34-241','Kraków','793-231-546','1991-21-09','1998-03-09','Dariusz Starnoch','Polska'),
+(1010,'Kingston','Romanowska 31','34-241','Kraków','793-231-546','1991-12-09','1998-03-09','Dariusz Starnoch','Polska'),
 (1011,'GoodRam','Mikołowska 42','43-173','Łaziska Górne','459-985-235','1992-07-11',NULL,'Wiesław Andrzejewski','Polska'),
 (1012,'Corsair','Central street 21','23-956','Fremont','315-998-414','2004-08-25',NULL,'Andy Paul','Stany Zjednoczone'),
 (1013,'Corsair','Krzyżanowska 23','78-898','Kraków','123-468-969','1998-08-24','2004-04-12','Michał Kurzajewski','Polska'),
@@ -28,4 +29,4 @@ INSERT INTO importer VALUES
 (1027,'LG','Zamkowa 27','45-336','Kielce','232-454-002','1998-12-01',NULL,'Janusz Michcik','Polska'),
 (1028,'EdiMax','Spacerowa 13','24-668','Warsawa','221-031-784','2001-04-03',NULL,'Bartłomiej Skalski','Polska'),
 (1028,'D-Link','Kolejowa 8','47-112','Kraków','321-402-552','2000-05-28',NULL,'Stefan Mercel','Polska'),
-(1028,'D-Link','Shinghu 12','76-212','Tajpej','892-423-893','1990-12-28','1999-12-24','Tony Tsao','Tajwan'),
+(1028,'D-Link','Shinghu 12','76-212','Tajpej','892-423-893','1990-12-28','1999-12-24','Tony Tsao','Tajwan');

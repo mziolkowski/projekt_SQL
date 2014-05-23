@@ -1,3 +1,4 @@
+
 INSERT INTO Pracownik VALUES 
 
 -- Prezes --
@@ -18,13 +19,13 @@ INSERT INTO Pracownik VALUES
 -- Magazynier --
 (1003'Szymon','Brzoza','1969-03-16','Piaseczno','Kaktusowa 23','503-984-432','2007-05-11',NULL,'sbrzoza@itshop.com',250,1500,1003),
 (1005'Michal','Okoń','1986-05-12','Warszawa','Gradowa 99/13','442-312-421','2002-02-16','2006-03-15','mokon@itshop.com',NULL,1900,1003),
-(1009'Olaf','Kur','1980-01-12','Radzymin','Radiowa 92','783-423-583','2005-12-12','NULL','okur@itshop.com',NULL,2000,1003,
+(1009'Olaf','Kur','1980-01-12','Radzymin','Radiowa 92','783-423-583','2005-12-12',NULL,'okur@itshop.com',NULL,2000,1003,
 (1010'Wiesław','Idek','1966-02-08','Piaseczno','Maślana 23/12','883-312-212','2002-02-16',NULL,'widek@itshop.com',300,1900,1003);
 
 -- Informatyk --
-(1008'Pawel','Kolder','1978-11-12','Warszawa','Jowisza 18','578-328-290','1998-08-22','NULL','pkolder@itshop.com',500,4000,1005),
+(1008'Pawel','Kolder','1978-11-12','Warszawa','Jowisza 18','578-328-290','1998-08-22',NULL,'pkolder@itshop.com',500,4000,1005),
 
 -- Sprzedawca --
 (1011'Olga','Byk','1980-11-12','Warszawa','Sowia 1','432-423-432','2000-12-12',NULL,'obyk@itshop.com',150,2000,1004),
 (1012'Jakub','Szmit','1988-01-04','Piaseczno','Szklana 1/12','874-673-875','2000-12-12',NULL,'jszmit@itshop.com',NULL,2200,1004),
-(1013'Józef','Olgier','1979-8-09','Warszawa','Garażowa 15','903-837-790','2000-12-12','2011-05-15','jolgier@itshop.com',150,1900,1004),
+(1013'Józef','Olgier','1979-8-09','Warszawa','Garażowa 15','903-837-790','2000-12-12','2011-05-15','jolgier@itshop.com',150,1900,1004);

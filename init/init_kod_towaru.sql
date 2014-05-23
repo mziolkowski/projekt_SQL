@@ -1,3 +1,4 @@
+
 INSERT INTO Kod_towaru VALUES 
 (1001,'Warszawa','1','A','32','15'),
 (1002,'Warszawa','3','B','28','28'),
@@ -30,7 +31,7 @@ INSERT INTO Kod_towaru VALUES
 (1027,'Warszawa','2','A','41','32'),
 (1028,'Warszawa','3','B','31','29'),
 (1029,'Warszawa','1','A','28','10'),
-(1023,'Warszawa','1','A','27','23'),
+(1030,'Warszawa','1','A','27','23'),
 
 (1031,'Warszawa','3','A','1','1'),
 (1032,'Warszawa','3','B','2','22'),
@@ -70,4 +71,5 @@ INSERT INTO Kod_towaru VALUES
 (1063,'Warszawa','2','A','31','2'),
 (1064,'Warszawa','3','B','21','13'),
 (1065,'Warszawa','2','A','3','15'),
-(1066,'Warszawa','2','B','31','39'),
+(1066,'Warszawa','2','B','31','39');
+
