@@ -1,4 +1,4 @@
-
+﻿
 INSERT INTO Pracownik VALUES 
 
 -- Prezes --

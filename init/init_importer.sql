@@ -1,4 +1,4 @@
-
+﻿
 INSERT INTO importer VALUES
 (1001,'Intel','Bursztynowa 12','99-083','Szczecin','283-892-391','1990-01-05','2000-01-05','Tomasz Stachurski','Polska'),
 (1002,'Intel','Central Expy 190','33-221','Santa Clara','325-647-432','1995-01-05',NULL,'Jamie L. Matthews','Stany Zjednoczone'),

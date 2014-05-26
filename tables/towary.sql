@@ -10,7 +10,7 @@ opis VARCHAR (250) NOT NULL,
 ilosc INT,
 cena DECIMAL (10,2) NOT NULL,
 id_importer INT NOT NULL;
-id_importer INT NOT NULL;
+
 
 PRIMARY KEY (id_towar));
 

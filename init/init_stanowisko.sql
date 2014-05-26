@@ -1,4 +1,4 @@
-
+﻿
 INSERT INTO Stanowisko VALUES 
 (1000,'Prezes'),
 (1001,'Kierownik'),
