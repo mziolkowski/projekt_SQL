@@ -21,7 +21,7 @@ ALTER TABLE Zamowienia ADD FOREIGN KEY (id_transport) REFERENCES Transport (id_t
 
 CREATE TABLE Klient (
 	id_klient INT,
-	firma VARCHAR (20),
+	firma VARCHAR (20) NOT NULL,
 	imie VARCHAR (20) NOT NULL,
 	nazwisko VARCHAR (30) NOT NULL,
 	adres VARCHAR (40) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Klient (
 	miejscowosc VARCHAR (30) NOT NULL,
 	telefon VARCHAR (15) NOT NULL,
 	mail VARCHAR (30) NOT NULL,
-	staly_klient BIT,
+	staly_klient BIT
 
 PRIMARY KEY (id_klient));
 
@@ -61,7 +61,7 @@ PRIMARY KEY (id_kod));
 
 
 CREATE TABLE Koszyk (
-	id_koszyk INT,
+	id_koszyk INT IDENTITY (1001,1),
 	id_towar INT NOT NULL,
 	ilosc INT NOT NULL,
 	cena DECIMAL (10,2)
@@ -70,11 +70,12 @@ PRIMARY KEY (id_koszyk));
 
 
 CREATE TABLE Platnosc (
-	id_platnosc INT IDENTITY,
+	id_platnosc INT IDENTITY (1001,1),
 	gotowka BIT,
 	przelew BIT,
 	raty BIT,
 	kwota DECIMAL (10,2),
+	--waluta CHAR (3) nie wiem czy potrzebne jesli i tak wszystko w PLN bedzie
 
 PRIMARY KEY (id_platnosc));
 
@@ -382,12 +383,12 @@ INSERT INTO Kod_towaru VALUES
 -- P01 --
 /* Aktualizuje tabele klient do ajac do pola
  staly klient tak, jrsli zrobil w sklepie wiecej niz 4 razy zakupy */
-  
-CREATE PROCEDURE staly_3
+ 
+CREATE PROCEDURE staly
 AS BEGIN
-	UPDATE Klient SET staly_klient=1 FROM Zamowienia z JOIN Klient k ON (z.id_klienta=k.id_klient ) GROUP BY staly_klient  HAVING COUNT(z_id_zamowienia)=4 ;
+	UPDATE Klient SET staly_klient=1 WHERE Zamowienia.id_klienta=Klient.id_klient AND COUNT(Zamowienia.id_zamowienia)>=4;
 END
-EXEC staly_2;
+EXEC staly;
 
 -- P02 --
 /* Dodanie do tabeli towary opisu 'Niedostepny' jesli bedzie 0 sztuk na stanie i "Na wyczerpaniu" jesli ilosc bedziue mniejsza od 5 */
@@ -399,11 +400,11 @@ END
 EXEC stan;
 
 
-CREATE PROCEDURE stan_3
+CREATE PROCEDURE stan_2
 AS BEGIN
-	UPDATE Towary SET status_towaru='Na wyczerpaniu' WHERE ilosc>0 AND ilosc<7;
+	UPDATE Towary SET status_towaru='Na wyczerpaniu' WHERE ilosc BETWEEN 6 AND 1;
 END
-EXEC stan_3;
+EXEC stan_2;
 
 select * from Towary;
 
@@ -412,15 +413,15 @@ select * from Towary;
 
 CREATE PROCEDURE nowy_towar
 	@id_towar INT,
-	@typ VARCHAR (30),
-	@marka VARCHAR (30),
-	@model VARCHAR (30),
-	@id_kod INT,
-	@status_towaru VARCHAR (20),
-	@opis VARCHAR (250),
+	@typ VARCHAR (30) NOT NULL,
+	@marka VARCHAR (30) NOT NULL,
+	@model VARCHAR (30) NOT NULL,
+	@id_kod INT NOT NULL,
+	@status_towaru VARCHAR (20) NOT NULL,
+	@opis VARCHAR (250) NOT NULL,
 	@ilosc INT,
-	@cena DECIMAL (10,2),
-	@id_importer INT
+	@cena DECIMAL (10,2) NOT NULL,
+	@id_importer INT NOT NULL
 AS BEGIN
 	INSERT INTO Towary VALUES (
 	(SELECT MAX(id_towar)+1 FROM Towary),
@@ -434,25 +435,7 @@ AS BEGIN
 	@cena,
 	@id_importer)
 END
-EXEC nowy_towar 1067,'Dysk HDD', 'Hitachi',1067, 'Dostępny', 'Nowy super szybki dysk 7200RPM',9,600.00,1021;
 
-
--- P04 --
-/* Procedura dodaje towary do koszyka */
-
-CREATE PROCEDURE koszyczek_1
-	@id_koszyk INT,
-	@id_towar INT,
-	@ilosc INT,
-	@cena DECIMAL (10,2)
-AS BEGIN
-	INSERT INTO Koszyk VALUES (
-	@id_koszyk,
-	@id_towar,
-	@ilosc,
-	@cena)
-END
-EXEC koszyczek_1 1001,'1002',2,400.00;
 
 
 
@@ -473,20 +456,3 @@ AS BEGIN
 	i.poczatek_wpol BETWEEN 1999-01-01 AND 2001-12-31);
 RETURN @ilosc
 end
-
-
-/*Funkcje kora zwraca ilosc osób na stanowisku o podanej nazwie */
-
-CREATE FUNCTION stanowisko_1
-(
-@nazwa varchar (256)
-)
-RETURNS INT
-AS BEGIN
-DECLARE @zmienna INT
-SET @zmienna=(SELECT COUNT(p.id_pracownik) FROM Pracownik p, Stanowisko s WHERE p.id_stanowisko=s.id_stanowisko AND s.nazwa=@nazwa)
-RETURN @zmienna;
-end
-
-
-select * from Koszyk;
