@@ -380,8 +380,8 @@ INSERT INTO Kod_towaru VALUES
 -- Procedury --
 
 -- P01 --
-/* Aktualizuje tabele klient do ajac do pola
- staly klient tak, jrsli zrobil w sklepie wiecej niz 4 razy zakupy */
+/* Aktualizuje tabele klient dodajac do pola
+ staly klient tak, jesli zrobil w sklepie wiecej niz 4 razy zakupy */
   
 CREATE PROCEDURE staly_3
 AS BEGIN
@@ -389,8 +389,9 @@ AS BEGIN
 END
 EXEC staly_2;
 
+
 -- P02 --
-/* Dodanie do tabeli towary opisu 'Niedostepny' jesli bedzie 0 sztuk na stanie i "Na wyczerpaniu" jesli ilosc bedziue mniejsza od 5 */
+/* Dodanie do tabeli towary opisu 'Niedostepny' jesli bedzie 0 sztuk na stanie i "Na wyczerpaniu" jesli ilosc bedzie mniej niż 6 */
 
 CREATE PROCEDURE stan
 AS BEGIN
@@ -455,6 +456,29 @@ END
 EXEC koszyczek_1 1001,'1002',2,400.00;
 
 
+-- P05 --
+/* Procedura która zwraca towary które trzeba zamówić i zmienia ich status */
+
+CREATE PROCEDURE zam_twr
+AS BEGIN
+	SELECT * FROM Towary t WHERE T.status_towaru LIKE 'NIEDOSTĘPNY';
+	UPDATE Towary SET status_towaru='ZAMÓWIONY U PRODUCENTA' WHERE ilosc=0;
+END
+EXEC zam_twr;
+
+
+-- P06 --
+/* Procedura która zwraca jakie towary są w magazynie na poziomie A */
+
+CREATE PROCEDURE twr_magA
+AS BEGIN
+	SELECT t.id_towar, t.typ, t.marka, t.model FROM Towary t, Kod_towaru k 
+	WHERE k.id_kod=t.id_kod AND k.poziom LIKE 'A'; 
+END
+EXEC twr_magA;
+
+
+------------------------------*************************************************-----------------------------------
 
 
 -- Funkcje --
@@ -470,23 +494,71 @@ RETURNS INT
 AS BEGIN
 	DECLARE @ilosc INT
 	SET @ilosc=(SELECT COUNT(t.id_towar) FROM Importer i, Towary t WHERE t.id_importer=i.id_importer AND @nazwa=i.nazwa AND 
-	i.poczatek_wpol BETWEEN 1999-01-01 AND 2001-12-31);
+	i.poczatek_wspol BETWEEN 1999-01-01 AND 2001-12-31);
 RETURN @ilosc
 end
 
-
+-- F02 --
 /*Funkcje kora zwraca ilosc osób na stanowisku o podanej nazwie */
 
 CREATE FUNCTION stanowisko_1
-(
-@nazwa varchar (256)
-)
+	(
+	@nazwa VARCHAR (40)
+	)
 RETURNS INT
 AS BEGIN
-DECLARE @zmienna INT
-SET @zmienna=(SELECT COUNT(p.id_pracownik) FROM Pracownik p, Stanowisko s WHERE p.id_stanowisko=s.id_stanowisko AND s.nazwa=@nazwa)
+	DECLARE @zmienna INT
+	SET @zmienna=(SELECT COUNT(p.id_pracownik) FROM Pracownik p, Stanowisko s WHERE
+	 p.id_stanowisko=s.id_stanowisko AND s.nazwa=@nazwa)
 RETURN @zmienna;
-end
+END
 
 
-select * from Koszyk;
+
+-- F03 --
+/* Funkcja która zwraca szczególy kodu towaru, po modelu produktu */
+
+CREATE FUNCTION kod_1
+	(
+	@model VARCHAR (40)
+	)
+RETURNS VARCHAR
+AS BEGIN
+	DECLARE @kodzik VARCHAR
+	SET @kodzik=(SELECT k.id_kod, k.magazyn, k.hala, k.poziom, k.regal, k.polka FROM Kod_towaru k, Towary t 
+	WHERE @model=t.model AND t.id_kod=k.id_kod)
+RETURN @kodzik;
+END
+
+
+-- F04 --
+/* Funkcja która zwraca najniższą cenę produktu konkretnego typu */
+
+CREATE FUNCTION nis_cena
+	(
+	@nazwa VARCHAR (40)
+	)
+RETURNS VARCHAR
+AS BEGIN
+	DECLARE @tani VARCHAR
+	SET @tani=(SELECT t.typ ,t.marka, t.model, t.opis, t.cena, t.ilosc, t.status_towaru 
+	FROM Towary t WHERE @nazwa=T.typ AND t.cena=MIN(t.cena))
+RETURN @tani;
+END 
+
+
+-- F05 -- 
+/* Funkcja która wyswietla najwyższą wyplate na wskazanym stanowisku */
+
+CREATE FUNCTION pensja_stan
+	(
+	@nazwa VARCHAR (20)
+	)
+RETURNS INT
+AS BEGIN
+	DECLARE @calosc INT
+	SET @calosc=(SELECT (p.premia)+(p.pensja) AS Wyplata FROM Pracownik p, Stanowisko s
+	WHERE id_pracownik=id_pracownik AND @nazwa=s.nazwa AND s.id_stanowisko=p.id_stanowisko)
+RETURN @calosc;
+END
+
