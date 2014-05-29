@@ -12,4 +12,5 @@ AS BEGIN
 	 p.id_stanowisko=s.id_stanowisko AND s.nazwa=@nazwa)
 RETURN @zmienna;
 END
+GO
 

@@ -12,4 +12,5 @@ AS BEGIN
 	WHERE id_pracownik=id_pracownik AND @nazwa=s.nazwa AND s.id_stanowisko=p.id_stanowisko)
 RETURN @calosc;
 END
+GO
 
