@@ -6,3 +6,4 @@ CREATE TABLE Koszyk (
 	cena DECIMAL (10,2)
 
 PRIMARY KEY (id_koszyk));
+GO

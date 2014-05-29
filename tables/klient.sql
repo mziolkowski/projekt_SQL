@@ -12,3 +12,4 @@ CREATE TABLE Klient (
 	staly_klient BIT,
 
 PRIMARY KEY (id_klient));
+GO

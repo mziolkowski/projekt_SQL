@@ -15,3 +15,5 @@ PRIMARY KEY (id_towar));
 
 ALTER TABLE Towary ADD FOREIGN KEY (id_kod) REFERENCES Kod_towaru (id_kod)
 ALTER TABLE Towary ADD FOREIGN KEY (id_importer) REFERENCES Importer (id_importer)
+GO
+

@@ -17,3 +17,4 @@ ALTER TABLE Zamowienia ADD FOREIGN KEY (id_koszyk) REFERENCES Koszyk (id_koszyk)
 ALTER TABLE Zamowienia ADD FOREIGN KEY (id_klienta) REFERENCES Klient (id_klient)
 ALTER TABLE Zamowienia ADD FOREIGN KEY (id_platnosc) REFERENCES Platnosc (id_platnosc)
 ALTER TABLE Zamowienia ADD FOREIGN KEY (id_transport) REFERENCES Transport (id_transport)
+GO

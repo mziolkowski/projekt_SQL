@@ -17,3 +17,4 @@ CREATE TABLE Pracownik (
 PRIMARY KEY (id_pracownik));
 
 ALTER TABLE Pracownik ADD FOREIGN KEY (id_stanowisko) REFERENCES Stanowisko (id_stanowisko)
+GO

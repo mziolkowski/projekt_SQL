@@ -8,6 +8,6 @@ CREATE TABLE Transport (
 		miejscowosc VARCHAR (30) NOT NULL
 
 PRIMARY KEY (id_transport));
-
+GO
 
 --**************************************************************************************************************************--

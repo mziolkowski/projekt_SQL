@@ -8,3 +8,4 @@ CREATE TABLE Kod_towaru (
 	polka VARCHAR (2) NOT NULL
 
 PRIMARY KEY (id_kod));
+GO

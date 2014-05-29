@@ -12,3 +12,4 @@ CREATE TABLE Importer (
 	kraj VARCHAR (20) NOT NULL
 
 PRIMARY KEY (id_importer));
+GO

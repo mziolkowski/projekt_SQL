@@ -4,3 +4,4 @@ CREATE TABLE Stanowisko (
 	nazwa VARCHAR (20) NOT NULL
 
 PRIMARY KEY (id_stanowisko));
+GO

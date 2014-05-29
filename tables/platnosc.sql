@@ -7,3 +7,4 @@ CREATE TABLE Platnosc (
 	kwota DECIMAL (10,2),
 
 PRIMARY KEY (id_platnosc));
+GO
