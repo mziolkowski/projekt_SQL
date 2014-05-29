@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO Stanowisko VALUES 
 	(1000,'Prezes'),
 	(1001,'Kierownik'),
@@ -7,3 +7,4 @@ INSERT INTO Stanowisko VALUES
 	(1004,'Sprzedawca'),
 	(1005,'Informatyk'),
 	(1006,'Księgowy');
+GO

@@ -1,1 +1,5 @@
-CREATE USE firma;
+CREATE DATABASE firma;
+GO
+
+USE firma;
+GO

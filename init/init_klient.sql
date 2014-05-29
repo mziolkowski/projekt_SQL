@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO Klient VALUES
 	(1101,NULL,'Michał','Kłos','Kwiatowa 12','00-312','Warszawa','232-234-842','dark_lord@gmail.com',0),
 	(1102,NULL,'Mateusz','Jarosz','Ogrodowa 21/3','01-131','Gdansk','980-423-032','jar_mat@wp.pl',0),
@@ -11,3 +11,4 @@ INSERT INTO Klient VALUES
 	(1109,NULL,'Tomasz','Piłat','Idy 8/42','93-222','Zakopane','939-212-991','tomek.pilat@gmail.com',0),
 	(1110,NULL,'Adam','Kor','Sezamkowa 321/43','55-902','Warszawa','321-311-782','Kor001@yahoo.com',0),
 	(1111,NULL,'Sebastian','Torr','Kwiatowa 123','00-882','Wrocław','892-444-792','root00213@gmail.com',0);
+GO

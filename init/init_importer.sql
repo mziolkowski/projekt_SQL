@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO Importer VALUES
 	(1001,'Intel','Bursztynowa 12','99-083','Szczecin','283-892-391','1990-01-05','2000-01-05','Tomasz Stachurski','Polska'),
 	(1002,'Intel','Central Expy 190','33-221','Santa Clara','325-647-432','1995-01-05',NULL,'Jamie L. Matthews','Stany Zjednoczone'),
@@ -30,3 +30,4 @@ INSERT INTO Importer VALUES
 	(1028,'EdiMax','Spacerowa 13','24-668','Warszawa','221-031-784','2001-04-03',NULL,'Bartłomiej Skalski','Polska'),
 	(1029,'D-Link','Kolejowa 8','47-112','Kraków','321-402-552','2000-05-28',NULL,'Stefan Mercel','Polska'),
 	(1030,'D-Link','Shinghu 12','76-212','Tajpej','892-423-893','1990-12-28','1999-12-24','Tony Tsao','Tajwan');
+GO

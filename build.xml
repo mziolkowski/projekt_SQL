@@ -26,6 +26,7 @@
 	<target name="database">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_database.sql" fixlastline="yes">
 			<filelist dir=".">
+				<file name="database\drop.sql"/>
 				<file name="database\create.sql"/>
 			</filelist>
 		</concat>
@@ -34,16 +35,17 @@
 	<target name="tables">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_tables.sql" fixlastline="yes">
 			<filelist dir=".">
-				<file name="tables\zamowienia.sql"/>
-				<file name="tables\klient.sql"/>
-				<file name="tables\importer.sql"/>
-				<file name="tables\kod_towaru.sql"/>
 				<file name="tables\koszyk.sql"/>
+				<file name="tables\klient.sql"/>
 				<file name="tables\platnosc.sql"/>
-				<file name="tables\pracownik.sql"/>
-				<file name="tables\stanowisko.sql"/>
-				<file name="tables\towary.sql"/>
 				<file name="tables\transport.sql"/>
+				<file name="tables\stanowisko.sql"/>
+				<file name="tables\kod_towaru.sql"/>
+				<file name="tables\importer.sql"/>
+				<file name="tables\pracownik.sql"/>
+				<file name="tables\towary.sql"/>
+				<file name="tables\zamowienia.sql"/>				
+				
 			</filelist>
 		</concat>
 	</target>
@@ -51,11 +53,11 @@
 	<target name="init">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_init.sql" fixlastline="yes">
 			<filelist dir=".">
+				<file name="init\init_stanowisko.sql"/>
 				<file name="init\init_pracownicy.sql"/>
 				<file name="init\init_klient.sql"/>
 				<file name="init\init_kod_towaru.sql"/>
 				<file name="init\init_importer.sql"/>
-				<file name="init\init_stanowisko.sql"/>
 				<file name="init\init_towary.sql"/>
 				<file name="init\init_transport.sql"/>
 			</filelist>

@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO Towary VALUES
 	(1001,'Procesor','Intel','Core 2 Duo',1001,'Dostępny','2x2,4 GHz, 8Mb cache',7,671.00,1002),
 	(1002,'Procesor','Amd','X6 FX-6300',1002,'Niedostępny','2x3,6 GHz, 8Mb cache',0,370.00,1003),
@@ -77,3 +77,4 @@ INSERT INTO Towary VALUES
 	(1065,'Chłodzenie CPU','BeQuiet','Dark Rock Advanced',1065,'Niedostępny','Wysokość 167mm, LGA1155, LGA1150, Socket 940, Socket 754, LGA2011  Prędkość obrotowa 1500RPM',0,212.00,1018),
 	(1066,'Chłodzenie CPU','Noctau','NH-U9B',1066,'Dostępny','Wysokość 152mm, LGA1366, LGA1156, LGA775, AM3, AM2+, AM2  Prędkość obrotowa 1500RPM',7,228.00,1023);
 --------------------------------------------------------------------------------------------------------
+GO

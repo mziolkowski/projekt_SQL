@@ -1,4 +1,4 @@
-﻿
+
 INSERT INTO Pracownik VALUES 
 
 -- Prezes --
@@ -29,3 +29,4 @@ INSERT INTO Pracownik VALUES
 	(1011,'Olga','Byk','1980-11-12','Warszawa','Sowia 1','432-423-432','2000-12-12',NULL,'obyk@itshop.com',150,2000,1004),
 	(1012,'Jakub','Szmit','1988-01-04','Piaseczno','Szklana 1/12','874-673-875','2000-12-12',NULL,'jszmit@itshop.com',NULL,2200,1004),
 	(1013,'Józef','Olgier','1979-8-09','Warszawa','Garażowa 15','903-837-790','2000-12-12','2011-05-15','jolgier@itshop.com',150,1900,1004);
+GO
