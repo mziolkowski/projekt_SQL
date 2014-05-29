@@ -8,33 +8,25 @@
 CREATE PROCEDURE staly_3
 AS BEGIN
 
-	WITH ilosc_transakcji_CTE 
-	(
-		cte_id_klient
-	)
-	AS
-	(
-		SELECT
-			id_klient
-		FROM
-			Zamowienia z
-			JOIN
-			Klient k
-			ON (z.id_klienta=k.id_klient) 
-		GROUP BY
-			k.id_klient
-		HAVING
-			COUNT(z.id_zamowienia) > 4	
-	)
 	UPDATE
-		k
+		Klient
 	SET
-		staly_klient =1 
-	FROM
-	Klient k 
-	JOIN
-	ilosc_transakcji_CTE
-	ON (k.id_klient=cte_id_klient)
+		staly_klient = 1 
+	WHERE
+		id_klient IN 
+		(
+			SELECT
+				id_klient
+			FROM
+				Zamowienia z
+				JOIN
+				Klient k
+				ON (z.id_klienta=k.id_klient) 
+			GROUP BY
+				k.id_klient
+			HAVING
+				COUNT(z.id_zamowienia) > 4	
+		)
 END
 
 -- przyklad
