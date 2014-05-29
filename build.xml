@@ -7,14 +7,18 @@
 		<delete file="_database.sql"/>
 		<delete file="_tables.sql"/>
 		<delete file="_init.sql"/>
+		<delete file="_procedury.sql"/>
+		<delete file="_funkcje.sql"/>
 	</target>
 	
-	<target name="all" depends="database,tables,init">
+	<target name="all" depends="database,tables,init,procedury,funkcje">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_all.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="_database.sql"/>
 				<file name="_tables.sql"/>
 				<file name="_init.sql"/>
+				<file name="_procedury.sql"/>
+				<file name="_funkcje.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -54,6 +58,31 @@
 				<file name="init\init_stanowisko.sql"/>
 				<file name="init\init_towary.sql"/>
 				<file name="init\init_transport.sql"/>
+			</filelist>
+		</concat>
+	</target>
+	
+	<target name="procedury">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_procedury.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="procedury\P01.sql"/>
+				<file name="procedury\P02.sql"/>
+				<file name="procedury\P03.sql"/>
+				<file name="procedury\P04.sql"/>
+				<file name="procedury\P05.sql"/>
+				<file name="procedury\P06.sql"/>
+			</filelist>
+		</concat>
+	</target>
+	
+	<target name="funkcje">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_funkcje.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="funkcje\F01.sql"/>
+				<file name="funkcje\F02.sql"/>
+				<file name="funkcje\F03.sql"/>
+				<file name="funkcje\F04.sql"/>
+				<file name="funkcje\F05.sql"/>
 			</filelist>
 		</concat>
 	</target>
