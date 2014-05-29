@@ -10,7 +10,7 @@
 	</target>
 	
 	<target name="all" depends="database,tables,init">
-		<concat destfile="_all.sql" fixlastline="yes">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_all.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="_database.sql"/>
 				<file name="_tables.sql"/>
@@ -20,7 +20,7 @@
 	</target>
 	
 	<target name="database">
-		<concat destfile="_database.sql" fixlastline="yes">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_database.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="database\create.sql"/>
 			</filelist>
@@ -28,7 +28,7 @@
 	</target>
 	
 	<target name="tables">
-		<concat destfile="_tables.sql" fixlastline="yes">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_tables.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="tables\zamowienia.sql"/>
 				<file name="tables\klient.sql"/>
@@ -45,7 +45,7 @@
 	</target>
 	
 	<target name="init">
-		<concat destfile="_init.sql" fixlastline="yes">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_init.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="init\init_pracownicy.sql"/>
 				<file name="init\init_klient.sql"/>
