@@ -1,6 +1,6 @@
 
-CREATE TABLE Importer (
-	id_importer INT,
+CREATE TABLE Import (
+	id_import INT,
 	nazwa VARCHAR (30) NOT NULL,
 	adres VARCHAR (40) NOT NULL,
 	kod_pocztowy VARCHAR (7) NOT NULL,
@@ -11,5 +11,5 @@ CREATE TABLE Importer (
 	prezes_firmy VARCHAR (50) NOT NULL,
 	kraj VARCHAR (20) NOT NULL
 
-PRIMARY KEY (id_importer));
+PRIMARY KEY (id_import));
 GO

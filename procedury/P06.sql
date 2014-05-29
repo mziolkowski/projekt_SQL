@@ -7,7 +7,8 @@ AS BEGIN
 	SELECT t.id_towar, t.typ, t.marka, t.model FROM Towary t, Kod_towaru k 
 	WHERE k.id_kod=t.id_kod AND k.poziom LIKE 'A'; 
 END
-EXEC twr_magA;
+--Przyklad
+--EXEC twr_magA;
 
 
 ------------------------------*************************************************-----------------------------------

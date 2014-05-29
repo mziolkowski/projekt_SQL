@@ -7,6 +7,7 @@ AS BEGIN
 	SELECT * FROM Towary t WHERE T.status_towaru LIKE 'NIEDOSTĘPNY';
 	UPDATE Towary SET status_towaru='ZAMÓWIONY U PRODUCENTA' WHERE ilosc=0;
 END
-EXEC zam_twr;
+--Przyklad
+--EXEC zam_twr;
 GO
 

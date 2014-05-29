@@ -14,6 +14,7 @@ AS BEGIN
 	@ilosc,
 	@cena)
 END
-EXEC koszyczek_1 1001,'1002',2,400.00;
+--Przyklad
+--EXEC koszyczek_1 1001,'1002',2,400.00;
 GO
 

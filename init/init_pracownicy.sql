@@ -1,5 +1,5 @@
 
-INSERT INTO Pracownik VALUES 
+INSERT INTO Pracownicy VALUES 
 
 -- Prezes --
 	(1000,'Krzysztof','Zawada','1965-10-12','Warszawa','Polna 15','213-994-789','1990-01-05',NULL,'krzysztof.zawada@itshop.com',NULL,15000,1000),

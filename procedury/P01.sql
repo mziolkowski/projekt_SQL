@@ -29,7 +29,7 @@ AS BEGIN
 		)
 END
 
--- przyklad
-EXEC staly_3;
+--Przyklad
+--EXEC staly_3;
 GO
 

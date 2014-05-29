@@ -9,11 +9,11 @@ CREATE TABLE Towary (
 	opis VARCHAR (250) NOT NULL,
 	ilosc INT,
 	cena DECIMAL (10,2) NOT NULL,
-	id_importer INT
+	id_import INT
 
 PRIMARY KEY (id_towar));
 
 ALTER TABLE Towary ADD FOREIGN KEY (id_kod) REFERENCES Kod_towaru (id_kod)
-ALTER TABLE Towary ADD FOREIGN KEY (id_importer) REFERENCES Importer (id_importer)
+ALTER TABLE Towary ADD FOREIGN KEY (id_import) REFERENCES Import (id_import)
 GO
 

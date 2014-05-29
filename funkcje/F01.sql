@@ -12,8 +12,10 @@ CREATE FUNCTION towary_grud
 RETURNS INT
 AS BEGIN
 	DECLARE @ilosc INT
-	SET @ilosc=(SELECT COUNT(t.id_towar) FROM Importer i, Towary t WHERE t.id_importer=i.id_importer AND @nazwa=i.nazwa AND 
+	SET @ilosc=(SELECT COUNT(t.id_towar) FROM import i, Towary t WHERE t.id_import=i.id_import AND @nazwa=i.nazwa AND 
 	i.poczatek_wspol BETWEEN @data_od AND @data_do);
 RETURN @ilosc
-end
+END
+--Przyklad
+--SELECT * FROM towary_grud ('Intel','1999-01-01','2002-01-01');
 GO

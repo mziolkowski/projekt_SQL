@@ -51,4 +51,5 @@ BEGIN
 END
 GO
 
+--Przyklad
 --SELECT * FROM kod ('i7-920');

@@ -41,8 +41,8 @@ BEGIN
 		t.model,
 		t.status_towaru, 
 		t.opis,
-		t.cena,
-		t.ilosc
+		t.ilosc,
+		t.cena
 	FROM
 		Towary t
 	WHERE

@@ -13,7 +13,7 @@ CREATE PROCEDURE stan_3
 AS BEGIN
 	UPDATE Towary SET status_towaru='Na wyczerpaniu' WHERE ilosc>0 AND ilosc<7;
 END
-EXEC stan_3;
+--Przyklad
+--EXEC stan_3;
 
-select * from Towary;
 GO

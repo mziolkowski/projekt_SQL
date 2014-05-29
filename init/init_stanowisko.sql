@@ -1,5 +1,5 @@
 
-INSERT INTO Stanowisko VALUES 
+INSERT INTO Stanowiska VALUES 
 	(1000,'Prezes'),
 	(1001,'Kierownik'),
 	(1002,'Handlowiec'),
