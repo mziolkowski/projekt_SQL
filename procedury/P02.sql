@@ -7,7 +7,7 @@ AS BEGIN
 	UPDATE Towary SET status_towaru='Niedostępny' WHERE ilosc=0;
 END
 EXEC stan;
-
+GO
 
 CREATE PROCEDURE stan_3
 AS BEGIN
@@ -16,3 +16,4 @@ END
 EXEC stan_3;
 
 select * from Towary;
+GO

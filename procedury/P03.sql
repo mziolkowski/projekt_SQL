@@ -27,4 +27,5 @@ AS BEGIN
 	@id_importer)
 END
 EXEC nowy_towar 1067,'Dysk HDD', 'Hitachi',1067, 'Dostępny', 'Nowy super szybki dysk 7200RPM',9,600.00,1021;
+GO
 
