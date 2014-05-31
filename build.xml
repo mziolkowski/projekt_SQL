@@ -9,9 +9,10 @@
 		<delete file="_init.sql"/>
 		<delete file="_procedury.sql"/>
 		<delete file="_funkcje.sql"/>
+		<delete file="_transakcje.sql"/>
 	</target>
 	
-	<target name="all" depends="database,tables,init,procedury,funkcje">
+	<target name="all" depends="database,tables,init,procedury,funkcje,transakcje">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_all.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="_database.sql"/>
@@ -19,6 +20,7 @@
 				<file name="_init.sql"/>
 				<file name="_procedury.sql"/>
 				<file name="_funkcje.sql"/>
+				<file name="_transakcje.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -60,6 +62,9 @@
 				<file name="init\init_importer.sql"/>
 				<file name="init\init_towary.sql"/>
 				<file name="init\init_transport.sql"/>
+				<file name="init\init_platnosci.sql"/>
+				<file name="init\init_koszyk.sql"/>
+				<file name="init\init_zamowienia.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -73,6 +78,7 @@
 				<file name="procedury\P04.sql"/>
 				<file name="procedury\P05.sql"/>
 				<file name="procedury\P06.sql"/>
+				<file name="procedury\P07.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -85,6 +91,19 @@
 				<file name="funkcje\F03.sql"/>
 				<file name="funkcje\F04.sql"/>
 				<file name="funkcje\F05.sql"/>
+			</filelist>
+		</concat>
+	</target>
+	
+	<target name="transakcje">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_transakcje.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="transakcje\T01.sql"/>
+				<file name="transakcje\T02.sql"/>
+				<file name="transakcje\T03.sql"/>
+				<file name="transakcje\T04.sql"/>
+				<file name="transakcje\T05.sql"/>
+				
 			</filelist>
 		</concat>
 	</target>
