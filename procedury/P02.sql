@@ -4,15 +4,27 @@
 
 CREATE PROCEDURE stan
 AS BEGIN
-	UPDATE Towary SET status_towaru='Niedostępny' WHERE ilosc=0;
+	UPDATE 
+		Towary 
+	SET 
+		status_towaru='Niedostępny'
+	WHERE 
+		ilosc=0;
 END
-EXEC stan;
+--EXEC stan;
 GO
 
 CREATE PROCEDURE stan_3
 AS BEGIN
-	UPDATE Towary SET status_towaru='Na wyczerpaniu' WHERE ilosc>0 AND ilosc<7;
+	UPDATE 
+		Towary 
+	SET 
+		status_towaru='Na wyczerpaniu' 
+	WHERE 
+		ilosc>0 
+		AND ilosc<7;
 END
+GO
 --Przyklad
 --EXEC stan_3;
 

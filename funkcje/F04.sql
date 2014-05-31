@@ -19,14 +19,14 @@ IF OBJECT_ID (N'nis_cena') IS NOT NULL
    DROP FUNCTION nis_cena
 GO
 
-CREATE FUNCTION nis_cena (@typ VARCHAR (30))
+CREATE FUNCTION nis_cena (@typ VARCHAR (90))
 RETURNS @wyniki TABLE 
 (
     -- columns returned by the function
-	[typ] [varchar](30) NOT NULL,
-	[marka] [varchar](30) NOT NULL,
-	[model] [varchar](30) NOT NULL,
-	[status_towaru] [varchar](20) NOT NULL,
+	[typ] [varchar](990) NOT NULL,
+	[marka] [varchar](90) NOT NULL,
+	[model] [varchar](90) NOT NULL,
+	[status_towaru] [varchar](90) NOT NULL,
 	[opis] [varchar](250) NOT NULL,
 	[ilosc] [int] NULL,
 	[cena] [decimal](10, 2) NOT NULL

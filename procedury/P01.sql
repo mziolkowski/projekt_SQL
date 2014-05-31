@@ -25,10 +25,10 @@ AS BEGIN
 			GROUP BY
 				k.id_klient
 			HAVING
-				COUNT(z.id_zamowienia) > 4	
+				COUNT(z.id_zamowienia) > 3	
 		)
 END
-
+GO
 --Przyklad
 --EXEC staly_3;
 GO

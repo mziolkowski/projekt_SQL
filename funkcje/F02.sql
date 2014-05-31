@@ -8,11 +8,20 @@ CREATE FUNCTION stanowiska_1
 RETURNS INT
 AS BEGIN
 	DECLARE @zmienna INT
-	SET @zmienna=(SELECT COUNT(p.id_pracownicy) FROM pracownicy p, stanowiska s WHERE
-	 p.id_stanowiska=s.id_stanowiska AND s.nazwa=@nazwa)
-RETURN @zmienna;
+	SET @zmienna=(
+		SELECT 
+			COUNT(p.id_pracownicy) AS Ilosc_osob 
+		FROM 
+			pracownicy p, 
+			stanowiska s 
+		WHERE
+			p.id_stanowiska=s.id_stanowiska 
+			AND s.nazwa=@nazwa
+		 )
+RETURN @zmienna
 END
+GO
 --Przyklad
---SELECT * FROM stanowiska_1;
+--SELECT * FROM stanowiska_1('Handlowiec');
 GO
 

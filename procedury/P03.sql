@@ -15,7 +15,7 @@ CREATE PROCEDURE nowy_towar
 	@id_import INT
 AS BEGIN
 	INSERT INTO Towary VALUES (
-	(SELECT MAX(id_towar)+1 FROM Towary),
+	@id_towar,
 	@typ,
 	@marka,
 	@model,
@@ -26,7 +26,8 @@ AS BEGIN
 	@cena,
 	@id_import)
 END
+GO
 --Przyklad
---EXEC nowy_towar 1067,'Dysk HDD', 'Hitachi',1067, 'Dostępny', 'Nowy super szybki dysk 7200RPM',9,600.00,1021;
+--EXEC nowy_towar 1067,'Dysk HDD', 'Hitachi','M320',1065, 'Dostępny', 'Nowy super szybki dysk 7200RPM',9,600.00,1021;
 GO
 
