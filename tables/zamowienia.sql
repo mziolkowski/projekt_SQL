@@ -1,6 +1,6 @@
 
 CREATE TABLE Zamowienia (
-	id_zamowienia INT IDENTITY (1001,1),
+	id_zamowienia INT,
 	id_koszyk INT NOT NULL,
 	id_klienta INT NOT NULL,
 	data_zamowienia DATE NOT NULL,
