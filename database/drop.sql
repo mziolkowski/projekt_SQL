@@ -1,2 +1,2 @@
-DROP DATABASE Firma;
+DROP DATABASE firma;
 GO
