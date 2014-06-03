@@ -3,7 +3,7 @@
 
 -- P01 --
 /* Aktualizuje tabele klient dodajac do pola
- staly klient tak, jesli zrobil w sklepie wiecej niz 4 razy zakupy */
+ staly klient tak, jesli zrobil w sklepie wiecej niz 3 razy zakupy */
   
 CREATE PROCEDURE staly_3
 AS BEGIN

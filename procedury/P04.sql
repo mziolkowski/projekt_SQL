@@ -14,5 +14,5 @@ AS BEGIN
 END
 GO
 --Przyklad
---EXEC koszyczek_1 1011,1002,2;
+--EXEC koszyczek_1 1011,1032,2;
 GO

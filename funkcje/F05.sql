@@ -26,6 +26,6 @@ RETURN @calosc
 END
 GO
 --Przyklad
---SELECT * FROM pensja_stan ('Handlowiec');
+--SELECT  dbo.pensja_stan('Handlowiec');
 GO
 

@@ -16,7 +16,7 @@ INSERT INTO Towary VALUES
 --------------------------------------------------------------------------------------------------
 	(1013,'Pamięć RAM','Kingston','HyperX Fury',1013,'Dostępny','4 Gb DDR3, Częstotliwość pracy 1600MHz',20,140.00,1009),
 	(1014,'Pamięć RAM','Kingston','HyperX',1014,'Dostępny','2x8 Gb DDR3, Częstotliwość pracy 1600MHz',10,600.00,1009),
-	(1015,'Pamięć RAM','GoodRam','Play',1015,'Dostępny','4 Gb DDR3, Częstotliwość pracy 1333MHz',4,135.00,1011),
+	(1015,'Pamięć RAM','GoodRam','Play',1015,'Dostępny','4 Gb DDR3, Częstotliwość pracy 1333MHz',20,135.00,1011),
 	(1016,'Pamięć RAM','GoodRam','Play',1016,'Niedostępny','4 Gb DDR3, Częstotliwość pracy 1600MHz',0,140.00,1011),
 	(1017,'Pamięć RAM','Corsair','Classic',1017,'Niedostępny','2x2 Gb DDR3, Częstotliwość pracy 1600MHz',0,170.00,1013),
 	(1018,'Pamięć RAM','Patriot','Retail',1018,'Dostępny','2x4 Gb DDR3, Częstotliwość pracy 1333MHz',11,280.00,1014),
@@ -30,15 +30,15 @@ INSERT INTO Towary VALUES
 --------------------------------------------------------------------------------------------------
 	(1025,'Zasilacz','Corsair','VS',1025,'Dostępny','ATX 12V, 450W',15,145.00,1012),
 	(1026,'Zasilacz','XFX','Pro Series',1026,'Dostępny',' ATX 12V, EPS12V, 550W',10,235.00,1015),
-	(1027,'Zasilacz','Corsair','RM',1027,'Niedostępny',' ATX 12V, 850W',0,545.00,1013),
+	(1027,'Zasilacz','Corsair','RM',1027,'Dostępny',' ATX 12V, 850W',0,545.00,1013),
 	(1028,'Zasilacz','SilentiumPC','Deus',1028,'Niedostępny',' ATX 12V, 600W',0,235.00,1016),
-	(1029,'Zasilacz','Corsair','VS',1029,'Dostępny',' ATX 12V, 350W',9,115.00,1012),
+	(1029,'Zasilacz','Corsair','VS',1029,'Dostępny',' ATX 12V, 350W',3,115.00,1012),
 	(1030,'Zasilacz','BeQuiet','Dark Power Pro 10',1030,'Dostępny',' ATX 12V V2.92, ATX 12V V2.31, 550W',5,512.00,1017),
 ---------------------------------------------------------------------------------------------------
 	(1031,'Dysk Twardy 3,5"','Western Digigtal','Caviar Blue',1031,'Dostępny','Sata III, 500Gb 7200RPM, 16MB Cache',9,180.00,1020),
 	(1032,'Dysk Twardy 3,5"','Seagate','Classic',1032,'Dostępny','Sata III, 1000b 7200RPM, 64MB Cache',18,195.00,1022),
 	(1033,'Dysk Twardy 3,5"','Western Digigtal','Red',1033,'Niedostępny','Sata III, 2000Gb 7200RPM, 64MB Cache',0,13580.00,1019),
-	(1034,'Dysk Twardy 3,5"','Hitachi','Ultrastar',1034,'Dostępny','Sata III, 2000Gb 7200RPM, 64MB Cache',8,630.00,1021),
+	(1034,'Dysk Twardy 3,5"','Hitachi','Ultrastar',1034,'Dostępny','Sata III, 2000Gb 7200RPM, 64MB Cache',3,630.00,1021),
 	(1035,'Dysk Twardy 3,5"','Seagate','Barracuda',1035,'Niedostępny','Sata III, 3000Gb 7200RPM, 64MB Cache',0,470.00,1022),
 	(1036,'Dysk Twardy 3,5"','Western Digigtal','Caviar Blue',1036,'Dostępny','Sata III, 250Gb 7200RPM, 16MB Cache',13,184.00,1020),
 ----------------------------------------------------------------------------------------------------
@@ -46,8 +46,8 @@ INSERT INTO Towary VALUES
 	(1038,'Obudowa','SilentiumPC','Gladius M40 Pure',1038,'Dostępny','Czarana, Midi Tower, Kompatybilność z Micro ATX, ATX',18,199.00,1016),
 	(1039,'Obudowa','Corsair','Carbide Series 330R',1039,'Niedostępny','Czarana, Midi Tower, Kompatybilność z Micro ATX, ATX',0,300.00,1012),
 	(1040,'Obudowa','SilentiumPC','Brutus M23',1040,'Dostępny','Czarana, Midi Tower, Kompatybilność z Micro ATX, ATX',5,139.00,1016),
-	(1041,'Obudowa','Fractal Design','Define R4',1004,'Niedostępny','Czarana, Midi Tower, Kompatybilność z Micro ATX, ATX',18,385.00,1024),
-	(1042,'Obudowa','Cooler Master','Elite 330U',1043,'Niedostępny','Czarano-srebrna, Midi Tower, Kompatybilność z Micro ATX, ATX',0,155.00,1025),
+	(1041,'Obudowa','Fractal Design','Define R4',1041,'Dostępny','Czarana, Midi Tower, Kompatybilność z Micro ATX, ATX',18,385.00,1024),
+	(1042,'Obudowa','Cooler Master','Elite 330U',1042,'Niedostępny','Czarano-srebrna, Midi Tower, Kompatybilność z Micro ATX, ATX',0,155.00,1025),
 -----------------------------------------------------------------------------------------------------
 	(1043,'Karta sieciowa','TP-LINK Design','TG-3269',1043,'Dostępny','Przeznaczenie: Komputer stacjonarny, wewnętrzna, PCI 2.x',19,35.00,1026),
 	(1044,'Karta sieciowa','TP-LINK Design','TF-3239DL',1044,'Niedostępny','Przeznaczenie: Komputer stacjonarny, wewnętrzna, PCI 2.x',0,16.00,1026),

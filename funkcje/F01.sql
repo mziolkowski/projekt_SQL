@@ -1,7 +1,7 @@
 -- Funkcje --
 
 -- F01 --
-/* FUNKCJA ktora zwraca ilosc importowanych towarów od producenta z którym w 1999-2001 nawiązaliśmy współprace */
+/* FUNKCJA ktora zwraca ilosc importowanych towarów od producenta z którym w wybranych latach nawiązaliśmy współprace */
 
 CREATE FUNCTION towary_grud
 (
@@ -27,5 +27,5 @@ RETURN @ilosc
 END
 GO
 --Przyklad
---SELECT * FROM towary_grud ('Intel','1999-01-01','2002-01-01');
+--SELECT dbo.towary_grud ('Intel','1995-01-01','1996-01-01');
 GO

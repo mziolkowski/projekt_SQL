@@ -1,3 +1,4 @@
+
  -- T04 --
  /* Transakcja usuwa rekory z tabeli Zamowienia, które sa sprzed 2012 */
  

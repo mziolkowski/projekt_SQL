@@ -22,6 +22,6 @@ RETURN @zmienna
 END
 GO
 --Przyklad
---SELECT * FROM stanowiska_1('Handlowiec');
+--SELECT dbo.stanowiska_1('Handlowiec');
 GO
 
