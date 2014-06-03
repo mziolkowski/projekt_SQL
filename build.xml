@@ -10,9 +10,10 @@
 		<delete file="_procedury.sql"/>
 		<delete file="_funkcje.sql"/>
 		<delete file="_transakcje.sql"/>
+		<delete file="_widoki.sql"/>
 	</target>
 	
-	<target name="all" depends="database,tables,init,procedury,funkcje,transakcje">
+	<target name="all" depends="database,tables,init,procedury,funkcje,transakcje,widoki">
 		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_all.sql" fixlastline="yes">
 			<filelist dir=".">
 				<file name="_database.sql"/>
@@ -21,6 +22,7 @@
 				<file name="_procedury.sql"/>
 				<file name="_funkcje.sql"/>
 				<file name="_transakcje.sql"/>
+				<file name="_widoki.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -103,7 +105,20 @@
 				<file name="transakcje\T03.sql"/>
 				<file name="transakcje\T04.sql"/>
 				<file name="transakcje\T05.sql"/>
-				
+				<file name="transakcje\T06.sql"/>
+				<file name="transakcje\T07.sql"/>
+			</filelist>
+		</concat>
+	</target>
+			
+				<target name="widoki">
+		<concat encoding="UTF-8" outputencoding="UTF-8" destfile="_widoki.sql" fixlastline="yes">
+			<filelist dir=".">
+				<file name="widoki\W01.sql"/>
+				<file name="widoki\W02.sql"/>
+				<file name="widoki\W03.sql"/>
+				<file name="widoki\W04.sql"/>
+				<file name="widoki\W05.sql"/>
 			</filelist>
 		</concat>
 	</target>
