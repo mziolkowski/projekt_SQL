@@ -1,5 +1,5 @@
 -- F02 --
-/*Funkcje kora zwraca ilosc osób na stanowisku o podanej nazwie */
+/*Funkcje ktora zwraca ilosc osób na stanowisku o podanej nazwie */
 
 CREATE FUNCTION stanowiska_1
 	(
