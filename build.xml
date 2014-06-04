@@ -81,6 +81,8 @@
 				<file name="procedury\P05.sql"/>
 				<file name="procedury\P06.sql"/>
 				<file name="procedury\P07.sql"/>
+				<file name="procedury\P08.sql"/>
+				<file name="procedury\P09.sql"/>
 			</filelist>
 		</concat>
 	</target>
@@ -104,9 +106,6 @@
 				<file name="transakcje\T02.sql"/>
 				<file name="transakcje\T03.sql"/>
 				<file name="transakcje\T04.sql"/>
-				<file name="transakcje\T05.sql"/>
-				<file name="transakcje\T06.sql"/>
-				<file name="transakcje\T07.sql"/>
 			</filelist>
 		</concat>
 	</target>
