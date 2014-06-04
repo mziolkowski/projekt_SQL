@@ -6,7 +6,7 @@ CREATE TABLE Zamowienia (
 	data_zamowienia DATE NOT NULL,
 	id_platnosci INT NOT NULL,
 	zaplacone BIT NOT NULL,
-	faktora BIT,
+	faktura BIT,
 	status_zamowienia VARCHAR (20) NOT NULL,
 	id_transport INT NOT NULL,
 	czas_dostawy VARCHAR (2) NOT NULL
