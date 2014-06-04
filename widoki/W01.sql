@@ -1,17 +1,15 @@
---******************************************************************************************************************************************--
--- Widoki --
-
 -- W01 --
-/* Widok prezentuje ilosc transakcji w miesiacu maj */
+/* Widok prezentuje ilosc transakcji w obecnym miesiacu */
 
-CREATE VIEW tran_maj AS (
+CREATE VIEW tran_mies AS (
 SELECT
 * 
-FROM Zamowienia 
+FROM Zamowienia z
 WHERE
-MONTH(data_zamowienia)=5);
+DATEPART(MM,z.data_zamowienia) = MONTH(GETDATE())
+AND DATEPART(YY,z.data_zamowienia) = YEAR(GETDATE()));
 GO
 
 -- Przyklad --
--- SELECT * FROM tran_maj;
--- GO
+-- SELECT * FROM tran_mies;
+GO

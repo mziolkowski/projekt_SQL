@@ -17,7 +17,7 @@ SELECT
     dbo.Towary.marka,
     dbo.Towary.model,
     dbo.Towary.cena,
-    GETDATE() AS DATA_WYSTAWIENIA_FAKTORY
+    GETDATE() AS DATA_WYSTAWIENIA_FAKTURY
 FROM 
 	dbo.Zamowienia,
 	dbo.Klient,
@@ -27,7 +27,7 @@ WHERE
 	dbo.Zamowienia.id_klienta = dbo.Klient.id_klient
 	AND dbo.Zamowienia.id_koszyk = dbo.Koszyk.id_koszyk
 	AND dbo.Koszyk.id_towar=dbo.Towary.id_towar
-	AND dbo.Zamowienia.faktora=1 
+	AND dbo.Zamowienia.faktura=1 
 	AND dbo.Zamowienia.zaplacone=1
 );
 GO
