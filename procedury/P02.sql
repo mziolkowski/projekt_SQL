@@ -9,12 +9,15 @@ AS BEGIN
 	SET 
 		status_towaru='Niedostępny'
 	WHERE 
-		ilosc=0;
+		ilosc=0
+		AND status_towaru='Dostępny' 
+		OR status_towaru='Na wyczerpaniu';
 END
 --EXEC stan;
 GO
 
 CREATE PROCEDURE stan_3
+	@ile_jest INT
 AS BEGIN
 	UPDATE 
 		Towary 
@@ -22,10 +25,10 @@ AS BEGIN
 		status_towaru='Na wyczerpaniu' 
 	WHERE 
 		ilosc>0 
-		AND ilosc<7;
+		AND ilosc<@ile_jest;
 END
 GO
 --Przyklad
---EXEC stan_3;
+--EXEC stan_3 7;
 
 GO

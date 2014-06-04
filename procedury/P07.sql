@@ -9,7 +9,7 @@ CREATE PROCEDURE zam_towaru
 	@data_zamowienia DATE,
 	@id_platnosci INT,
 	@zaplacone BIT,
-	@faktora BIT,
+	@faktura BIT,
 	@status_zamowienia VARCHAR (90),
 	@id_transport INT,
 	@czas_dostawy VARCHAR (2)
@@ -21,7 +21,7 @@ INSERT INTO Zamowienia VALUES (
 	@data_zamowienia,
 	@id_platnosci,
 	@zaplacone,
-	@faktora,
+	@faktura,
 	@status_zamowienia,
 	@id_transport,
 	@czas_dostawy)
@@ -31,5 +31,4 @@ GO
  --EXEC zam_towaru 1011,1011,1105,'2014-06-06',1001,1,0,'W drodze',1002,3;
 
 
-------------------------------*************************************************-----------------------------------
-GO
+

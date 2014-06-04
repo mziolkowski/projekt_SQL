@@ -6,8 +6,9 @@
  staly klient tak, jesli zrobil w sklepie wiecej niz 3 razy zakupy */
   
 CREATE PROCEDURE staly_3
+	@ile_zam varchar (2)
 AS BEGIN
-
+SET @ile_zam=3;
 	UPDATE
 		Klient
 	SET
@@ -25,11 +26,11 @@ AS BEGIN
 			GROUP BY
 				k.id_klient
 			HAVING
-				COUNT(z.id_zamowienia) > 3	
+				COUNT(z.id_zamowienia) > @ile_zam	
 		)
 END
 GO
 --Przyklad
---EXEC staly_3;
+--EXEC staly_3 3;
 GO
 

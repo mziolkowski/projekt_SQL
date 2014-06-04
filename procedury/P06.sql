@@ -10,11 +10,11 @@ AS BEGIN
 		t.marka, 
 		t.model 
 	FROM 
-		Towary t, 
-		Kod_towaru k 
+		Towary t
+		JOIN Kod_towaru k
+		ON (k.id_kod=t.id_kod ) 
 	WHERE 
-		k.id_kod=t.id_kod 
-		AND k.poziom LIKE 'A'; 
+		k.poziom LIKE 'A'; 
 END
 GO
 --Przyklad
